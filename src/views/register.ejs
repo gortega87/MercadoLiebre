@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>home</title>
+  </head>
+  <body>
+    <header class="main-header">
+
+      <div class="main-header-top-bar">
+        <div class="barra-logo">
+          <a href="/"><img src="images/logo-mercado-liebre.svg" class="logo"></a>
+          
+          <div class="search-bar"> <input type="text" placeholder="Buscar productos, marcas"><i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        
+        </div>
+
+        <h2 class="copy-header">
+            <i class="fas fa-hand-holding-usd"></i>
+            Comprá en cuotas y sin tarjeta de crédito
+        </h2>
+    </div>
+
+    <a href="#" class="hamburger-button">
+        <i class="fa-solid fa-bars"></i>
+    </a>
+
+    <nav class="main-navbar">
+
+        <ul class="left-navbar">
+            <li> <a href="#">Ofertas</a></li>
+            <li> <a href="#">Tiendas Oficiales</a></li>
+            <li> <a href="#">Vender</a></li>
+            <li> <a href="#">Ayuda</a></li>
+        </ul>
+
+        <ul class="right-navbar">
+            <li> <a href="register.html">Creá tu cuenta</a> <i class="fa-solid fa-id-card"></i> </li>
+            <li> <a href="login.ejs">Ingresá</a> <i class="fa-solid fa-arrow-right-to-bracket"></i> </li>
+            <li> <a href="#">Mis compras</a> <i class="fa-solid fa-cart-shopping"></i> </li>
+        </ul>
+    </nav>
+    </header>
+
+      <!-- <img id="banner" src="images/img-home-banner.jpg" alt="imagen banner"> -->
+
+    <!-- FORMULARIO -->
+
+    <form action="/" method="POST" class="formulario">  <!-- metodo get que envia datos a home.ejs (action="/"") -->
+     
+      <div class="datos">
+        <input type="text" name="nombre" placeholder="Nombre y apellido" minlength="5">
+        <span class="error">Ingresa un nombre de más de 5 caracteres</span>
+
+        <input type="text" name="usuario" placeholder="Nombre de usuario" minlength="5">
+        <span class="error">Ingresa un nombre de más de 5 caracteres</span>
+
+        <input type="email" name="email" placeholder="E-mail">
+        <span class="error">Ingresa un correo válido</span>
+      </div>
+
+      <div class="nacimiento">
+        <label><h3>Fecha de nacimiento:</h3></label>
+        <input type="date" name="fechaNacimiento">
+      </div>
+      <div class="domicilio">
+        <input type="text" name="domicilio" placeholder="Domicilio">
+      </div>
+      <div class="seleccion">
+        <label><h3>Perfil de usuario:</h3></label><br>
+        <label for="perfilComp"> 
+          <input type="radio" id="perfilComp" name="perfil" value="comprar">
+          <p>Comprar</p>
+        </label>
+        <label for="perfilComp"> 
+          <input type="radio" id="perfilVen" name="perfil" value="vender">
+          <p>Vender</p>
+        </label>    
+      </div>
+    
+      <div class="seleccion">
+        <label><h3>Categorias de interés:</h3></label>
+        
+        <label for="electro">
+          <input type="checkbox" id="electro" name="categoria" value="electro">
+          <p>Electro</p>
+        </label>
+        
+        <label for="moda">
+          <input type="checkbox" id="electro" name="categoria" value="moda">
+          <p>Moda</p>
+        </label>
+
+        <label for="hogar">
+          <input type="checkbox" id="electro" name="categoria" value="hogar">
+          <p>Hogar</p>
+        </label>
+
+        <label for="jugueteria"> 
+          <input type="checkbox" id="electro" name="categoria" value="jugueteria">
+          <p>Jugueteria</p>
+        </label>
+
+        <label for="vidaSana"> 
+          <input type="checkbox" id="electro" name="categoria" value="vidaSana">
+          <p>Vida Sana</p>
+        </label>
+      </div>
+
+      <div class="foto">
+        <label><h3>Foto de usuario:</h3></label>
+        <input type="file" name="fotoUsuario" accept="image/png, image/jpeg">
+      </div>
+
+      <div class="password">
+        <input type="password" name="contrasena" placeholder="Contraseña" minlength="5">
+        <span class="error">Ingresa una contraseña de más de 5 caracteres</span>
+      </div>
+      <div class="password">
+        <input type="password" name="contrasena2" placeholder=" Confirmar contraseña" minlength="5">
+        <span class="error">Ingresa de nuevo tu contraseña</span>
+      </div>
+
+      <button type="reset">Borrar</button>
+      <button type="submit">Guardar</button>
+
+    </form>
+
+
+    <footer>
+      <section>
+        <i class="fa-solid fa-credit-card"></i>
+        <h3>Pagá con tarjeta o en efectivo</h3>
+        <p>Con Mercado Liebre Cash, tenés cuotas sin interes con tarjeta o efectioco en puntos de pago.Y siempre seguro!</p>
+      </section>
+
+      <section>
+        <i class="fa-solid fa-gift"></i>
+        <h3>Envío gratis desde los $2.500</h3>
+        <p>Solo por estar registrado en Mercado Liebre, tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+      </section>
+      <section>
+        <i class="fa-solid fa-user-shield"></i>
+        <h3>Seguridad de principio a fin</h3>
+        <p>No te gusta? Devolélo, en Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+      </section>
+      <p>Copyright 1999 - 2020 Mercado Liebre SRL</p>
+    </footer>
+
+  </body>
